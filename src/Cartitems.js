@@ -3,16 +3,25 @@ import { Grid,Typography,Button,ButtonGroup } from "@mui/material";
 import { addElipsis } from "./utils/common-utils";
 
 export default function Cartitems({item}) {
-    
+    const [Quantity,setQuantity]=React.useState(1);
+    const incrementQuantity = () => {
+        if(Quantity<=5)
+        {setQuantity(Quantity + 1);}
+  };
+const decrementQuantity = () => {
+    if (Quantity > 1) {
+      setQuantity(Quantity - 1);
+    }
+  };
     return (
         <>
                     <Grid style={{display:'flex',borderTop:'0.5px solid #8f8f8f'}}>
                             <Grid style={{margin:'20px',display:'flex',flexDirection:'column'}}>
                             <img  src={item.url} height={80} width={70} style={{marginLeft:35}}/>
                                 <ButtonGroup variant="outlined"  aria-label="outlined button group" style={{marginTop:'40px'}}>
-                                <Button >+</Button>
-                                <Button >1</Button>
-                                <Button>-</Button>
+                                <Button onClick={incrementQuantity}>+</Button>
+                                <Button >{Quantity}</Button>
+                                <Button onClick={decrementQuantity}>-</Button>
                                 </ButtonGroup>
                             </Grid>
                             <Grid style={{margin:'20px',alignItems:"flex-start",display:'flex',flexDirection:'column'}}>
