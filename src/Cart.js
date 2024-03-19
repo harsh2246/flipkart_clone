@@ -11,8 +11,8 @@ export default function Cart(){
           <div style={{paddingBottom:'70px'}}>{<Header/>}</div>
           {cartItem.length ?
            <>
-                <Grid  container rowSpacing={1}   sx={{ paddingTop: '30px', paddingBottom: '30px', paddingLeft: '30px' , overflowY: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none'}} >
-                    <Grid item lg={8} md={8} sm={12} xs={12} style={{backgroundColor:'white'}}>
+                <Grid  container rowSpacing={1}   sx={{ paddingTop: '30px', paddingBottom: '30px', paddingLeft: '30px' }} >
+                    <Grid item lg={8} md={8} sm={12} xs={12} style={{backgroundColor:'white', overflowY: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
                         
                             <Grid>
                                     <Typography style={{padding:'15px 24px'}}>My Cart ({cartItem.length})</Typography>
