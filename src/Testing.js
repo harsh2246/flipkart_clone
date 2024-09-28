@@ -27,7 +27,16 @@ const CustomBox = styled(Box)(({ theme }) => ({
   export default function Testing(){
     
     return (
-     <> <Grid style={{display:'flex',flexdirection:'row',marginTop:'10px',justifyContent:'space-around',overflowX: 'auto', whiteSpace: 'nowrap'}}>
+     <> <Grid style={{display:'flex',flexdirection:'row',marginTop:'10px',justifyContent:'space-around',overflowX: 'auto', whiteSpace: 'nowrap',msOverflowStyle: 'none', 
+    scrollbarWidth: 'none' }}>
+ <style>
+    {`
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .scroll-container::-webkit-scrollbar {
+        display: none;
+      }
+    `}
+  </style>
      {navData.map((data) => (
     <React.Fragment key={data.text}>
       <Link  to={`/${data.text}`} style={{textDecoration:'none'}}>
