@@ -27,8 +27,8 @@ const CustomBox = styled(Box)(({ theme }) => ({
   export default function Testing(){
     
     return (
-     <> <Grid style={{display:'flex',flexdirection:'row',marginTop:'10px',justifyContent:'space-around',overflowX: 'auto', whiteSpace: 'nowrap',msOverflowStyle: 'none', 
-    scrollbarWidth: 'none' }}>
+     <> <Grid style={{display:'flex',flexdirection:'row',marginTop:'10px',justifyContent:'space-between',overflowX: 'auto', whiteSpace: 'nowrap',msOverflowStyle: 'none', 
+    scrollbarWidth: 'none',gap: '15px' }}>
  <style>
     {`
       /* Hide scrollbar for Chrome, Safari and Opera */
