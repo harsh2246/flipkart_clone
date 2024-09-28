@@ -27,7 +27,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
   export default function Testing(){
     
     return (
-     <> <Grid style={{display:'flex',flexdirection:'row',marginTop:'10px',justifyContent:'space-around'}}>
+     <> <Grid style={{display:'flex',flexdirection:'row',marginTop:'10px',justifyContent:'space-around',overflowX: 'auto', whiteSpace: 'nowrap'}}>
      {navData.map((data) => (
     <React.Fragment key={data.text}>
       <Link  to={`/${data.text}`} style={{textDecoration:'none'}}>
