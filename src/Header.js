@@ -82,7 +82,22 @@ export default function Header() {
   };
   
   return (
+    <style>
+    @media only screen and (max-width: 320px) {
+  .cart-text {
+    font-size: 14px; /* Smaller text size for Cart */
+  }
 
+  .signin-text {
+    font-size: 14px; /* Smaller text size for Login/Signup */
+  }
+
+  .MuiSvgIcon-root {
+    margin-left: 20px; /* Adjust the icon margin */
+  }
+}
+
+    </style>
     <Box sx={{ flexGrow: 1 }} style={{position: 'fixed',top: '0',zIndex:1,width: '100%'}}>
       <AppBar position="static">
         <Toolbar>
@@ -126,16 +141,27 @@ export default function Header() {
       
     </div>
 
-          <Link to="/cart" style={{ textDecoration: 'none', color: 'white' }}>
-          <Badge badgeContent={4} color="secondary">
-            <ShoppingCartIcon style={{marginLeft:'50px'}}/>
-          </Badge>
-          <span style={{color:'white',fontWeight:'bolder',letterSpacing:'0.5px',paddingLeft:'10px',fontSize:'18px'}}>Cart</span>
-          </Link>
-          <Link to="/signin" style={{ textDecoration: 'none', color: 'white' }}>
-          <AccountCircleIcon style={{marginLeft:'50px'}}/>
-          <span style={{color:'white',fontWeight:'bolder',letterSpacing:'0.5px'}}>Login/Signup</span>
-          </Link>
+         <Link to="/cart" style={{ textDecoration: 'none', color: 'white' }}>
+  <Badge badgeContent={4} color="secondary">
+    <ShoppingCartIcon style={{marginLeft:'50px'}} />
+  </Badge>
+  <span style={{
+    color: 'white',
+    fontWeight: 'bolder',
+    letterSpacing: '0.5px',
+    paddingLeft: '10px',
+    fontSize: '18px'
+  }} className="cart-text">Cart</span>
+</Link>
+<Link to="/signin" style={{ textDecoration: 'none', color: 'white' }}>
+  <AccountCircleIcon style={{marginLeft:'50px'}} />
+  <span style={{
+    color: 'white',
+    fontWeight: 'bolder',
+    letterSpacing: '0.5px'
+  }} className="signin-text">Login/Signup</span>
+</Link>
+
         </Toolbar>
       </AppBar>
       
